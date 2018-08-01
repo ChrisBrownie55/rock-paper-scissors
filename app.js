@@ -14,9 +14,7 @@ const moves = [
 ]
 const randomMove = () => Math.floor(Math.random() * moves.length)
 const makeMove = (playerMove, aiMove) => `
-  ${moves[playerMove].name} VS ${moves[playerMove.name]}
+  ${moves[playerMove].name} VS ${moves[aiMove].name}
   ${(playerMove === aiMove ? 'TIE' : moves[playerMove].win === aiMove ? 'WIN' : 'LOSE')}
 `
-const play = playerMove => {
-  document.getElementById('result').textContent = makeMove(playerMove, randomMove())
-}
+const play = playerMove => document.getElementById('result').textContent = makeMove(playerMove, randomMove())
