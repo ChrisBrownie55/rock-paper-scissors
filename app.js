@@ -18,3 +18,4 @@ const makeMove = (playerMove, aiMove) => `
   ${(playerMove === aiMove ? 'TIE' : moves[playerMove].win === aiMove ? 'WIN' : 'LOSE')}
 `
 const play = playerMove => document.getElementById('result').textContent = makeMove(playerMove, randomMove())
+
