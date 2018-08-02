@@ -49,12 +49,15 @@ button::before {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #ccc;
+  background-color: #eee;
   position: absolute;
   z-index: -1;
-  transition: filter 0.2s;
+  transition: width 0.2s, height 0.2s, transform 0.2s;
+  opacity: 0.5;
 }
 
 button:focus::before {
-  filter: blur(8px);
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  transform: translate(-0.25rem, -0.25rem);
 }
